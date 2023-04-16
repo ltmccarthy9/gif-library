@@ -63,11 +63,10 @@ h1 {
 }
 .card .info {
   position: absolute;
-  top: 50%;
-  right: 50%;
+  bottom: 10px;
+  left: 10px;
   z-index: 3;
   opacity: 0;
-  transform: translateY(50px);
   transition: 0.5s;
 }
 .card:hover .info {
@@ -83,7 +82,7 @@ h1 {
   padding: 0.6rem;
   outline: none;
   border: none;
-  border-radius: 7px;
+  margin: 2px;
   background: white;
   color: black;
   font-weight: bold;
@@ -94,3 +93,9 @@ h1 {
   background: #f87171;
   color: white;
 }
+
+.card .info button:active {
+  background: #e53935;
+  color: white;
+}
+
