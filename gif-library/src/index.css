@@ -28,4 +28,69 @@ h1 {
   line-height: 1.1;
 }
 
+.card {
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  transition: 0.4s ease-out;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+.card:hover::before {
+  opacity: 1;
+}
+.card .backImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 2;
+  transition: 0.5s;
+  opacity: 0;
+}
+.card .info {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  z-index: 3;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: 0.5s;
+}
+.card:hover .info {
+  opacity: 1;
+  transform: translateY(0px);
+}
 
+.card .info button {
+  font-size: 15px;
+  margin-top: 6px;
+}
+.card .info button {
+  padding: 0.6rem;
+  outline: none;
+  border: none;
+  border-radius: 7px;
+  background: white;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.card .info button:hover {
+  background: #f87171;
+  color: white;
+}

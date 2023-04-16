@@ -25,7 +25,7 @@ function App() {
   }
 
   return (
-    <main className='h-screen w-100% m-4'>
+    <main className='h-screen w-100% my-4 xl:mx-60'>
         <header className='w-full text-center mt-8'>
           <h1 className='font-bold'>Gif Library</h1>
         </header>
@@ -36,10 +36,13 @@ function App() {
           hover:bg-red-400 active:bg-red-500 ease-in duration-75 '>Go</button>
         </form>
 
-        <section className='grid grid-cols-4'>
+        <section className='grid grid-cols-1 sm:grid-cols-3 md:grid-cols-4 xl:grid-cols-5'>
           {gifs.length > 0 ? gifs.map((gif) => (
-              <div className='m-2' key={gif.id}>
+              <div className='card w-fit h-fit m-2 cursor-pointer' key={gif.id}>
                 <img src={gif.images.original.url} />
+                  <div className='info'>
+                      <button>save</button>
+                  </div>
               </div>
           )) : <h2 className='text-center text-2xl'>no gifs...</h2>}
         </section>
