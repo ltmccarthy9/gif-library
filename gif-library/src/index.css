@@ -23,11 +23,6 @@ body {
   min-height: 100vh;
 }
 
-h1 {
-  font-size: 3.2rem;
-  line-height: 1.1;
-}
-
 .card {
   position: relative;
   display: flex;
